@@ -1,6 +1,5 @@
 package ehu.isad.controllers.DB;
 
-import ehu.isad.model.Liburua;
 import ehu.isad.model.PHPinfo;
 
 import java.sql.ResultSet;
@@ -69,14 +68,6 @@ public class TaulaDBKud {
             return "";
 
         }
-
-    }
-
-    public void gehituLiburua(Liburua lib){
-
-        String query = "INSERT INTO liburuak values("+lib.getIsbn()+", \'"+lib.getEgilea()+"\', \'"+lib.getData()+"\', \'"+lib.getIzenburua()+"\', \'"+lib.getFilename()+"\')";
-        DBKudeatzaile dbKudeatzaile = DBKudeatzaile.getInstantzia();
-        ResultSet rs = dbKudeatzaile.execSQL(query);
 
     }
 
